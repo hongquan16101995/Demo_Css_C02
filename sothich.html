@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 500px;
+            height: 250px;
+            margin: 10px 20px 20px 20px;
+            background-color: white;
+        }
+
+        form {
+            width: 540px;
+            height: 280px;
+            background-color: aqua;
+            padding-top: 4px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 0;
+        }
+
+        .title {
+            color: blue;
+            text-align: right;
+        }
+
+        #big-title {
+            background-color: orange;
+            color: white;
+            height: 20px;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td id="big-title" colspan="4"><h2>SỞ THÍCH CỦA BẠN</h2></td>
+        </tr>
+        <tr>
+            <td class="title">Họ và tên</td>
+            <td colspan="3"><input type="text" size="35"></td>
+        </tr>
+        <tr>
+            <td class="title">Email</td>
+            <td colspan="3"><input type="text" size="28"></td>
+        </tr>
+        <tr>
+            <td class="title">Sở thích</td>
+            <td><input type="checkbox"><span>Du lịch</span></td>
+            <td><input type="checkbox"><span>Thể thao</span></td>
+            <td><input type="checkbox"><span>Đọc sách</span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox"><span>Chơi game</span></td>
+            <td><input type="checkbox"><span>Lướt web</span></td>
+            <td><input type="checkbox"><span>Xem phim</span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox"><span>Đạp xe</span></td>
+            <td><input type="checkbox"><span>Đá bóng</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="3">
+                <button>Gửi thông tin</button>
+                <button>Nhập lại</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
