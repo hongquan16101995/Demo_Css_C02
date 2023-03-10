@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<!--gọi hàm m1() từ nút bấm button-->
+<button onclick="m1()">Tính</button>
+<p id="result"></p>
+</body>
+<script>
+    //comment: giải thích cho phần code được viết
+    //dùng comment để loại phần code đang không muốn chạy
+    //bôi đen phần muốn comment => dùng ctrl + /
+    function m1() {
+        let side = +document.getElementById("input").value
+        let p = side * 4
+        let S = side * side
+        document.getElementById("result").innerHTML = "Chu vi là: " + p
+            + "m<br>Diện tích là: " + S + "m2"
+    }
+
+    function m2() {
+        let year = prompt("Nhập 1 năm bất kỳ: ")
+        //hàm parseInt(số thập phân): sẽ trả về phần nguyên của số đó
+        //hàm làm tròn trong lập trình: Math.floor(số thập phân) ; Math.round(số thập phân)
+        let century = parseInt(year / 100) + 1
+        alert("Thế kỷ là: " + century)
+    }
+
+    // m2()
+
+    function m3() {
+        //nhập cạnh từ bàn phím
+        let sideA = +prompt("Cạnh A: ")
+        let sideB = +prompt("Cạnh B: ")
+        let sideC = +prompt("Cạnh C: ")
+        //điều kiện check để 3 cạnh là tam giác
+        let check1 = sideA + sideB > sideC
+        let check2 = sideC + sideB > sideA
+        let check3 = sideA + sideC > sideB
+        //điều kiện check để tam giác là tam giác vuông (định lý Pytago)
+        let py1 = Math.pow(sideA, 2) + Math.pow(sideB, 2) === Math.pow(sideC, 2)
+        let py2 = Math.pow(sideB, 2) + Math.pow(sideC, 2) === Math.pow(sideA, 2)
+        let py3 = Math.pow(sideC, 2) + Math.pow(sideA, 2) === Math.pow(sideB, 2)
+
+        //ghép các điều kiện
+        if (check1 && check2 && check3) {
+            if (sideA === sideB && sideB === sideC) {
+                alert("Tam giác đều")
+            } else if (sideA === sideB || sideB === sideC || sideC === sideA) {
+                alert("Tam giác cân")
+            } else if (py1 || py2 || py3) {
+                alert("Tam giác vuông")
+            } else {
+                alert("Là tam giác")
+            }
+        } else {
+            alert("Không phải tam giác")
+        }
+    }
+    //lời gọi hàm để hàm m3() được thực thi
+    m3()
+</script>
+</html>
