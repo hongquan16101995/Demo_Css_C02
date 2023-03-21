@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type="text" id="input"></label>
+<button onclick="m2()">Translate</button>
+<p id="result"></p>
+</body>
+<script>
+    // function m1() {
+    //     let value = prompt("Nhập gì đó")
+    //     // isNaN(value) => true: khi value không phải là số; false khi value là 1 số
+    //     // isNaN => is not a number
+    //
+    //     if (isNaN(value)) {
+    //         alert(value + " không phải là 1 số")
+    //     } else {
+    //         alert(value + " là 1 số")
+    //     }
+    // }
+    //
+    // m1()
+
+
+    //từ điển
+    function m2() {
+        let arrEng = ["apple", "orange", "banana"]
+        let arrVn = ["táo", "cam", "chuối"]
+        let value = document.getElementById("input").value
+        let index = -1; //giá trị của 1 biến khi không được gán giá trị ban đầu sẽ là undefined
+        for (let i = 0; i < arrEng.length; i++) {
+            if (value == arrEng[i]) {
+                index = i
+            }
+        }
+
+        if (index === -1) {
+            document.getElementById("result").innerHTML = "Không tìm thấy"
+        } else {
+            let result = arrVn[index]
+            document.getElementById("result").innerHTML = result
+        }
+    }
+</script>
+</html>
